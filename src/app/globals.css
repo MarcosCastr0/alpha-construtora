@@ -24,6 +24,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.bg-gradient {
+  background: rgb(216, 207, 188);
+  background: linear-gradient(180deg, rgba(216, 207, 188, 1) 0%, rgba(86, 84, 73, 1) 100%);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
