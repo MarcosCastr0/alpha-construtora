@@ -11,7 +11,7 @@ type DataButton = {
 
 export default function AlternativeButton ({text, icon, type="button", onclick}:DataButton){
     return(
-        <button onClick={onclick} type={type} className="bg-light text-primary px-5 py-2 rounded-full flex justify-center items-center hover:bg-secundary trasition ease-in-out delay-100">       
+        <button onClick={onclick} type={type} className="bg-light text-primary px-5 py-2 rounded-full w-full flex justify-center items-center hover:bg-secundary trasition ease-in-out delay-100">       
             {text && <span className="mr-2">{text}</span>}
             {icon}
         </button>

@@ -1,5 +1,6 @@
 import AlternativeButton from "@/components/Buttons/AlternativeButton";
 import PrimaryButton from "@/components/Buttons/PrimaryButton";
+import RegisterProduct from "./Login";
 
 export default function Sobre(){
     return(
@@ -11,7 +12,7 @@ export default function Sobre(){
                         <h1 className="text-light text-2xl font-bold lg:text-5xl">Compre produtos da melhor qualidade para sua casa</h1>
                         <p className="text-primary font-bold mb-2 lg:text-2xl">Produtos nacionais e importados para você obter o melhor desempenho e mandar bem.</p>
 
-                        <div className="flex flex-col gap-4 lg:flex-row">
+                        <div className="flex flex-col gap-4 lg:flex-row justify-evenly">
                             <PrimaryButton
                                 text="Ir para a loja"
                             />

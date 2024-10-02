@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "@/pages/Login";
 import Menu from "@/components/Menu";
 import RegisterProduct from "@/pages/RegisterProduct";
+import RegisterUser from "@/pages/RegisterUser"
 
 const MainRoutes = () => {
     return (
@@ -14,8 +15,9 @@ const MainRoutes = () => {
                 <Routes>
                     <Route path="/" element={<About />} />
                     <Route path="/About" element={<About />}/>
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/Login" element={<Login />} />
                     <Route path="/RegisterProduct" element={<RegisterProduct />}/>
+                    <Route path="/RegisterUser" element={<RegisterUser />}/>
                 </Routes>
             </Router>
         </>
