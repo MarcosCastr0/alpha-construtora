@@ -7,6 +7,7 @@ import HamburguerButton from "@/components/Buttons/HamburguerButton";
 import HighlightOffRoundedIcon from "@mui/icons-material/HighlightOffRounded";
 import { Button } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
     const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -25,23 +26,27 @@ export default function Menu() {
                 <img className="w-20" src="" alt="Logo da Empresa" />
 
                 <div className="hidden lg:flex items-center gap-4">
-                    <TertiaryButton
-                        text="Sobre"
-                    />
+                    <Link to="/">
+                        <TertiaryButton
+                            text="Sobre"
+                        />
+                    </Link>
                     <TertiaryButton
                         text="Loja"
                     />
-                    <SecundaryButton
-                        text="Cadastrar Produto"
-                        icon={<ControlPointOutlinedIcon />}
-                    />
-
-                    <PrimaryButton
-                        text="Conta"
-                        icon={<AccountCircleOutlinedIcon />}
-                        type="button"
-                        onclick={() => alert("Clicou na conta")}
-                    />
+                    <Link to="/RegisterProduct">
+                        <SecundaryButton
+                            text="Cadastrar Produto"
+                            icon={<ControlPointOutlinedIcon />}
+                        />
+                    </Link>
+                    <Link to="/Login">
+                        <PrimaryButton
+                            text="Conta"
+                            icon={<AccountCircleOutlinedIcon />}
+                            type="button"
+                        />
+                    </Link>
                 </div>
 
                 <div className="flex lg:hidden">
@@ -51,30 +56,35 @@ export default function Menu() {
                         }
                     </Button>
                 </div>
-            </div>
+            </div >
             {showMenu && (
-                <div className="bg-light w-full h-[24vh] shadow-md top-20 lg:hidden " >
-                    <div className="flex flex-col gap-2 px-10">
-                        <TertiaryButton
-                            text="Sobre"
-                        />
+                <div className="bg-light h-[24vh] shadow-md top-20 px-10 lg:hidden " >
+                    <div className="flex flex-col gap-2 ">
+                        <Link className="flex justify-center" to="/">
+                            <TertiaryButton
+                                text="Sobre"
+                            />
+                        </Link>
                         <TertiaryButton
                             text="Loja"
                         />
-                        <SecundaryButton
-                            text="Cadastrar Produto"
-                            icon={<ControlPointOutlinedIcon />}
-                        />
-
-                        <PrimaryButton
-                            text="Conta"
-                            icon={<AccountCircleOutlinedIcon />}
-                            type="button"
-                            onclick={() => alert("Clicou na conta")}
-                        />
+                        <Link to="/RegisterProduct">
+                            <SecundaryButton
+                                text="Cadastrar Produto"
+                                icon={<ControlPointOutlinedIcon />}
+                            />
+                        </Link>
+                        <Link className="flex justify-center" to="/Login">
+                            <PrimaryButton
+                                text="Conta"
+                                icon={<AccountCircleOutlinedIcon />}
+                                type="button"
+                            />
+                        </Link>
                     </div>
                 </div>
-            )}
+            )
+            }
         </>
     )
 }

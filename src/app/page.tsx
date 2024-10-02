@@ -1,11 +1,8 @@
 "use client"
-import Sobre from "@/pages/About";
+import MainRoutes from "@/routes/Routes";
 
 export default function Home() {
   return (
-    <>
-      <Sobre/>
-      
-    </>
+      <MainRoutes/>
   );
 }
