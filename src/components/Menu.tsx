@@ -24,7 +24,9 @@ export default function Menu() {
     return (
         <>
             <div className="w-full h-20 bg-light shadow-md px-10 m-auto flex justify-between items-center lg:px-40 ">
-                <img className="w-14" src={Logo.src} alt="Logo da Empresa" />
+                <Link to="/">
+                    <img className="w-14" src={Logo.src} alt="Logo da Empresa" /> 
+                </Link>
 
                 <div className="hidden lg:flex items-center gap-4">
                     <Link to="/">
