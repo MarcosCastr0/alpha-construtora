@@ -1,9 +1,9 @@
 import AlternativeButton from "@/components/Buttons/AlternativeButton";
 import PrimaryButton from "@/components/Buttons/PrimaryButton";
-import RegisterProduct from "./Login";
+import { Link } from "react-router-dom";
 
-export default function Sobre(){
-    return(
+export default function Sobre() {
+    return (
         <>
             <section className="bg-gradient">
                 <div className="flex flex-col flex-wrap items-center p-5 lg:px-40 lg:flex-row xl:h-[50vh]">
@@ -13,9 +13,11 @@ export default function Sobre(){
                         <p className="text-primary font-bold mb-2 lg:text-2xl">Produtos nacionais e importados para você obter o melhor desempenho e mandar bem.</p>
 
                         <div className="flex flex-col gap-4 lg:flex-row justify-evenly">
-                            <PrimaryButton
-                                text="Ir para a loja"
-                            />
+                            <Link className="w-full" to="/Store">
+                                <PrimaryButton
+                                    text="Ir para a loja"
+                                />
+                            </Link>
 
                             <AlternativeButton
                                 text="Ver carrinho"

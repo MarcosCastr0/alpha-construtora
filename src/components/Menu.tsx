@@ -32,9 +32,11 @@ export default function Menu() {
                             text="Sobre"
                         />
                     </Link>
-                    <TertiaryButton
-                        text="Loja"
-                    />
+                    <Link to="/Store">
+                        <TertiaryButton
+                            text="Loja"
+                        />
+                    </Link>
                     <Link to="/RegisterProduct">
                         <SecundaryButton
                             text="Cadastrar Produto"
@@ -66,9 +68,11 @@ export default function Menu() {
                                 text="Sobre"
                             />
                         </Link>
-                        <TertiaryButton
-                            text="Loja"
-                        />
+                        <Link to="/Store">
+                            <TertiaryButton
+                                text="Loja"
+                            />
+                        </Link>
                         <Link to="/RegisterProduct">
                             <SecundaryButton
                                 text="Cadastrar Produto"

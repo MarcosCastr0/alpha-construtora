@@ -6,6 +6,7 @@ import Login from "@/pages/Login";
 import Menu from "@/components/Menu";
 import RegisterProduct from "@/pages/RegisterProduct";
 import RegisterUser from "@/pages/RegisterUser"
+import Store from "@/pages/Store";
 
 const MainRoutes = () => {
     return (
@@ -18,6 +19,7 @@ const MainRoutes = () => {
                     <Route path="/Login" element={<Login />} />
                     <Route path="/RegisterProduct" element={<RegisterProduct />}/>
                     <Route path="/RegisterUser" element={<RegisterUser />}/>
+                    <Route path="/Store" element={<Store />}/>
                 </Routes>
             </Router>
         </>

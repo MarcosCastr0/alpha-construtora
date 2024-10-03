@@ -6,7 +6,6 @@ type DataButton = {
     text?: string;
     icon?: ReactElement;
     type?: "button" | "submit" | "reset";
-    className?: string;
     onclick?: ()=> void; 
 }
 
